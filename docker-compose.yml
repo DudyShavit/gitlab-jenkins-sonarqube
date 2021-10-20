@@ -27,22 +27,10 @@ services:
     volumes:
       - 'jenkins_home:/var/jenkins_home'
       - '/var/run/docker.sock:/var/run/docker.sock'
-  sonarqube:
-    image: 'sonarqube:7.6-community'
-    ports:
-      - '9000:9000'
-    volumes:
-      - 'sonarqube_conf:/opt/sonarqube/conf'
-      - 'sonarqube_data:/opt/sonarqube/data'
-      - 'sonarqube_logs:/opt/sonarqube/logs'
-      - 'sonarqube_extensions:/opt/sonarqube/extensions'
 
 volumes:
   gitlab-data:
   gitlab-logs:
   gitlab-config:
   jenkins_home:
-  sonarqube_conf:
-  sonarqube_data:
-  sonarqube_logs:
-  sonarqube_extensions:
+ 
